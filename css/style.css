@@ -65,6 +65,13 @@ a {
 a:hover {
   	text-decoration: underline;
 }
+
+.info h1,
+.info h2,
+.info h3 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
   
 .site-title {
 	color: whitesmoke;
@@ -73,45 +80,51 @@ a:hover {
   
 .site-subtitle {
 	color: silver;  
-	font-style: italic;
 	font-style: lighter;
 	text-align: center;
 }
 
-section {
+.formacao {
+	color: silver;
+	align-content: center;
+	font-style: lighter;
+	text-align: center;
+}
+
+#experiencia {
 	height: 100vh;
 }
 
-#portfolio h2{
+#experiencia h2{
 	color: whitesmoke;
 	text-align: center;
 	padding: 50px;
 }
 
-#portfolio div{
+#experiencia div{
 	display: flex;
 	justify-content: space-evenly;
 	padding: 10px;
 }
 
 @media (min-width: 400px) {
-	#portfolio div{
+	#experiencia div{
 		padding: 20px;
 	}
 }
   
 @media (min-width: 600px) {
-	#portfolio div{
+	#experiencia div{
 		padding: 50px;
 	}
 }
 
-#portfolio figure{
+#experiencia figure{
 	height: 206px; 
 	width: 180px;
 }
 
-#portfolio figcaption{
+#experiencia figcaption{
 	color: whitesmoke;
 	text-align: center;
 }
