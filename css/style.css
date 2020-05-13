@@ -7,7 +7,7 @@
 body {
 	background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ4JNLR-s3D1A_gmxmUBL91EdcSPtXHZ48IOjNqprFVP0EqVFSn&usqp=CAU);
 	background-size: auto 100vh;
-	font-family: Arial;
+	font-family: 'Roboto', sans-serif;
 	height: 100vh;
 }
 
@@ -37,7 +37,7 @@ header {
 }
   
 .menu {
-	background-color: #FFFFFF;
+	background-image: -webkit-linear-gradient(#4a6ca9, #5675ab);
 	position: fixed;
 	top: 0;
 	width: 100vw;  
@@ -58,7 +58,7 @@ header {
 }
 
 a {
-	color: teal;
+	color: white;
 	text-decoration: none;
 }
   
@@ -69,15 +69,15 @@ a:hover {
 .info h1,
 .info h2,
 .info h3 {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	font-family: 'Architects Daughter', cursive;
+	line-height: 1.5em;
 }
   
 .site-title {
 	color: whitesmoke;
 	text-align: center;
 }
-  
+
 .site-subtitle {
 	color: silver;  
 	font-style: lighter;
@@ -85,51 +85,60 @@ a:hover {
 }
 
 .formacao {
-	color: silver;
 	align-content: center;
+	color: silver;
 	font-style: lighter;
 	text-align: center;
 }
 
-#experiencia {
+.experiencia {
 	height: 100vh;
+	padding: 2em;
+	width: 100vw;
 }
 
-#experiencia h2{
+.experiencia h2{
 	color: whitesmoke;
+	font-family: 'Inconsolata', monospace;
 	text-align: center;
-	padding: 50px;
+	margin-bottom: 2em;
+	margin-top: 1.5em;
 }
 
-#experiencia div{
-	display: flex;
-	justify-content: space-evenly;
-	padding: 10px;
+.experiencia .grid {
+	align-content: center;
+	display: grid;
+	gap: 1em;
+	height: calc(100vh - 1.5em - 2em - 4em - 2em);
+	justify-content: space-around;
 }
 
 @media (min-width: 400px) {
-	#experiencia div{
-		padding: 20px;
+	.experiencia .grid {
+		grid-template-columns: 240px;
 	}
 }
   
 @media (min-width: 600px) {
-	#experiencia div{
-		padding: 50px;
+	.experiencia .grid {
+		grid-template-columns: repeat(2, 240px);
 	}
 }
 
-#experiencia figure{
-	height: 206px; 
-	width: 180px;
+@media (min-width: 1200px) {
+	.experiencia .grid {
+		grid-template-columns: repeat(3, 240px);
+	}
 }
 
-#experiencia figcaption{
+.experiencia figure{
 	color: whitesmoke;
+	margin-bottom: 2em;
 	text-align: center;
 }
 
 .img-portfolio{
 	height: 180px;
-	width: 180px;
+	width: 100%;
+	object-fit: cover;
 }
