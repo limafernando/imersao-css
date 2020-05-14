@@ -55,6 +55,12 @@ header {
 .menu a{
 	display: block;
 	padding: 10px 20px;
+	transition: background-color, 0.7s, color, 0.7s;
+}
+
+.menu a:hover {
+	background-color: white;
+	color: #4a6ca9;
 }
 
 a {
@@ -91,12 +97,14 @@ a:hover {
 	text-align: center;
 }
 
+.contato,
 .experiencia {
 	height: 100vh;
 	padding: 2em;
 	width: 100vw;
 }
 
+.contato h2,
 .experiencia h2{
 	color: whitesmoke;
 	font-family: 'Inconsolata', monospace;
@@ -141,4 +149,36 @@ a:hover {
 	height: 180px;
 	width: 100%;
 	object-fit: cover;
+}
+
+.contato .icons {
+	text-align: center;
+}
+
+.contato a {
+	color: whitesmoke;
+	font-size: 2em;
+	transition: text-shadow 0.7s, color 0.7s;
+}
+
+.contato a:active,
+.contato a:hover {
+	text-decoration: none;
+	text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.contato .fa-linkedin:hover {
+	color: #0073b0;
+}
+
+.contato .fa-github:hover {
+	color: #323131;
+}
+
+.contato .fa-researchgate:hover {
+	color: #40ba9b;
+}
+
+.contato .fa-envelope:hover {
+	color: #dd4e41;
 }
