@@ -72,9 +72,9 @@ a:hover {
   	text-decoration: underline;
 }
 
-.info h1,
-.info h2,
-.info h3 {
+.home h1,
+.home h2,
+.home h3 {
 	font-family: 'Architects Daughter', cursive;
 	line-height: 1.5em;
 }
@@ -97,6 +97,7 @@ a:hover {
 	text-align: center;
 }
 
+.sobre,
 .contato,
 .experiencia {
 	height: 100vh;
@@ -104,6 +105,7 @@ a:hover {
 	width: 100vw;
 }
 
+.sobre h2,
 .contato h2,
 .experiencia h2{
 	color: whitesmoke;
@@ -111,6 +113,44 @@ a:hover {
 	text-align: center;
 	margin-bottom: 2em;
 	margin-top: 1.5em;
+}
+
+.sobre figure{
+	color: whitesmoke;
+	margin-bottom: 2em;
+	margin-right: 1em;
+	text-align: center;
+}
+
+@media (min-width: 600px) {
+	.sobre figure {
+		float: left;
+		text-align: left;
+	}
+}
+
+.img-sobre{
+	border-radius: 50%;
+	height: 160px;
+	width: 160px;
+	object-fit: fill;
+}
+
+@media (min-width: 600px) {
+	.img-sobre {
+		height: 220px;
+		width: 220px;
+	}
+}
+
+.sobre p {
+	color: whitesmoke;
+	margin-bottom: 1.5em;
+	text-align: justify;
+}
+
+.sobre a {
+	color: #4a6ca9;
 }
 
 .experiencia .grid {
@@ -147,8 +187,47 @@ a:hover {
 
 .img-portfolio{
 	height: 180px;
+	margin-bottom: 5px;
 	width: 100%;
 	object-fit: cover;
+}
+
+/*.img-portfolio:hover {
+	transform: scale(1.1);
+}*/
+
+.flip-card {
+	perspective: 500px;
+}
+
+.card {
+	position: relative;
+	transform-style: preserve-3d;
+	transition: 1s;
+}
+
+.flip-card:hover .card {
+	transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+	backface-visibility: hidden;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+.card-back {
+	background-color: rgba(255, 255, 255, 0.7);
+	display: flex;
+	height: 180px;
+	margin-bottom: 5px;
+	width: 100%;
+	transform: rotateY(180deg);
+	align-items: center;
+	text-align: center;
+	justify-content: center;
 }
 
 .contato .icons {
